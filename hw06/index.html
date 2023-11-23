@@ -174,18 +174,36 @@
       <h1>作業 06</h1>
     </div>
   </div>
-
-  <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      該次作業程式碼，請放在 https://github.com/<span style="color:red;">你的帳號</span>/vis2023f/hw<span style="color:red;">06</span>/src/ 檔案夾。
+      打開作品集資料夾 (GitHub 倉庫 vis2023f 傳送門) 
+      <hr>
+      <input type="button" name="back" onclick="location.href='https://github.com/NickyyyWang/vis2023f/tree/main/hw06'" value="按我  ٩(｡・ω・｡)و   前往倉庫"> 
     </div>
   </div>
 
+
+
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。心得報告 105 字。
+      <h4>前往你的 Demo 網頁</h4>
+      <a href="https://NickyyyWang.github.io/vis2023f/hw06/src/">hw06</a>
+    </div>
+  </div>
+  
+
+  <!-- ------------------------------------------------>
+  <div class="row hw12">
+    <div class="col-md-12 twenty">
+      
+在這次資料可視化的任務中，我深入參與了堆疊柱狀圖的製作過程，並成功將藝術產業的碳排放問題轉化成一副生動而引人入勝的圖表。這個過程不僅將我的技術技能提升到一個新的層次，同時也深化了我對數據背後故事的理解。這次的學習經驗使我更深信，卓越的視覺化不僅僅是傳遞信息的工具，更能夠啟發觀眾的思考。透過精心設計的圖表，我不僅呈現了複雜數據的關聯性，也在視覺上打動觀眾，引起他們對藝術產業碳排放問題的關注和思考。這樣的學習體驗不僅豐富了我的技術儲備，更培養了我對數據背後故事的敏感度，使我更具洞察力和深度。
+
+
+
+
+
+
     </div>
   </div>
 
@@ -201,30 +219,64 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox1" checked>   
+            </input>          
+          </td>
           <td id='m1'>2</td>
-          <td>Simple baseline - 描述、描述、描述</td>
+          <td>Simple baseline - 利用Plot完成堆疊柱狀圖 </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>6</td>
-          <td>Medium baseline - 描述、描述、描述 </td>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox2" checked>                      
+            </input>
+          </td>
+          <td id='m2'>1</td>
+          <td>Simple baseline - 加入Checkbox input使其可選擇呈現的資料集 </td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>2</td>
-          <td>Strong baseline - 描述、描述、描述 </td>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox3" checked>
+            </input>
+          </td>
+          <td id='m3'>3</td>
+          <td>Medium baseline - 利用SVG完成堆疊柱狀圖(含Checkbox) </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox4" checked>
+            </input>
+          </td>
+          <td id='m4'>1</td>
+          <td>Medium baseline - 加入D3的過渡效果 </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox5" checked>
+            </input>
+          </td>
+          <td id='m5'>2</td>
+          <td>Strong baseline - 利用SVG製成的堆疊柱狀圖添加陰影效果 </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox" class="flipswitch" id="myCheckbox6" checked>
+            </input>
+          </td>
+          <td id='m6'>1</td>
+          <td>Strong baseline - 添加滑鼠游標偵測效果 </td>
         </tr>
       </table>
     </div>
   </div>
 
+
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <iframe width="100%" height="500" frameborder="0" style="background-color: #FFFFFF"
+  src="https://observablehq.com/embed/998017b2e9daae15?cell=*"></iframe>  
     </div>
   </div>
 
@@ -265,6 +317,15 @@
 
     if (d3.select("#myCheckbox3").property("checked")){
       score += parseInt(d3.select('#m3').html());   
+    }
+    if (d3.select("#myCheckbox3").property("checked")){
+      score += parseInt(d3.select('#m4').html());   
+    }
+    if (d3.select("#myCheckbox3").property("checked")){
+      score += parseInt(d3.select('#m5').html());   
+    }
+    if (d3.select("#myCheckbox3").property("checked")){
+      score += parseInt(d3.select('#m6').html());   
     }
 
     d3.select("#myTotal").html(score);    

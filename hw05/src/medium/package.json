@@ -1,0 +1,14 @@
+{
+  "name": "1c29ffa8de094cff",
+  "main": "1c29ffa8de094cff@15.js",
+  "version": "15.0.0",
+  "homepage": "https://observablehq.com/d/1c29ffa8de094cff",
+  "author": {
+    "name": "Wang Nicky's Workspace",
+    "url": "https://observablehq.com/@wang-nicky-ws"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4 - 5"
+  }
+}

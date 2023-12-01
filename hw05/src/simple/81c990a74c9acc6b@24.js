@@ -2,12 +2,12 @@ function _1(md){return(
 md`# HW5 Simple baseline`
 )}
 
-function _simple(d3,simple_data,drag,invalidation)
+function _simple3(d3,simple_data,drag,invalidation)
 {
   // 指定圖表的尺寸。
-  const width = 500;
-  const height = 400;
-
+  const width = 1500;
+  const height = 1000;
+  
   // 計算圖形並啟動力模擬。
   const root = d3.hierarchy(simple_data);
   const links = root.links();
@@ -47,7 +47,7 @@ function _simple(d3,simple_data,drag,invalidation)
       .selectAll("g")
       .data(nodes)
       .join("g")
-      .attr("transform", d => `translate(${d.x},${d.y})`) // 定位節點
+      .attr("transform", d => `translate(${d.x},${d.depth * 100})`) // 定位節點
       .call(drag(simulation));
 
   // 添加節點外框
@@ -76,9 +76,6 @@ function _simple(d3,simple_data,drag,invalidation)
   nodes.forEach(node => {
     node.y = 0; // 將y座標設定在畫布的中間
   });
-
-  // 更新力模擬的y方向力，讓節點向下運動
-  simulation.force("y", d3.forceY().strength(0.1).y(d => d.depth * 100)); // 調整動力的方向和大小
   
   simulation.on("tick", () => {
     node.attr("transform", d => `translate(${d.x},${d.y})`); // 更新節點位置
@@ -96,7 +93,7 @@ function _simple(d3,simple_data,drag,invalidation)
 
 
 function _simple_data(FileAttachment){return(
-FileAttachment("output.json").json()
+FileAttachment("output@1.json").json()
 )}
 
 function _drag(d3){return(
@@ -126,16 +123,21 @@ simulation => {
 }
 )}
 
+function _output1(FileAttachment){return(
+FileAttachment("output@1.json").json()
+)}
+
 export default function define(runtime, observer) {
   const main = runtime.module();
   function toString() { return this.url; }
   const fileAttachments = new Map([
-    ["output.json", {url: new URL("../output.json", import.meta.url), mimeType: "application/json", toString}]
+    ["output@1.json", {url: new URL("../output@1s.json", import.meta.url), mimeType: "application/json", toString}]
   ]);
   main.builtin("FileAttachment", runtime.fileAttachments(name => fileAttachments.get(name)));
   main.variable(observer()).define(["md"], _1);
-  main.variable(observer("simple")).define("simple", ["d3","simple_data","drag","invalidation"], _simple);
+  main.variable(observer("simple3")).define("simple3", ["d3","simple_data","drag","invalidation"], _simple3);
   main.variable(observer("simple_data")).define("simple_data", ["FileAttachment"], _simple_data);
   main.variable(observer("drag")).define("drag", ["d3"], _drag);
+  main.variable(observer("output1")).define("output1", ["FileAttachment"], _output1);
   return main;
 }

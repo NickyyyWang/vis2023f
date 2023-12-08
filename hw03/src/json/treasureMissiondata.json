@@ -1,0 +1,34 @@
+{
+  "themeModelDataItems": [
+    {
+      "MissionExhibitName": "13",
+      "IsMissionExhibitComplete": true,
+      "MissionExhibitInitTime": "2023-11-03T14:26:54.769381+08:00",
+      "MissionExhibitEndTime": "2023-11-03T14:27:35.005723+08:00"
+    },
+    {
+      "MissionExhibitName": "16",
+      "IsMissionExhibitComplete": true,
+      "MissionExhibitInitTime": "2023-11-03T14:12:59.546531+08:00",
+      "MissionExhibitEndTime": "2023-11-03T14:13:16.781393+08:00"
+    },
+    {
+      "MissionExhibitName": "59",
+      "IsMissionExhibitComplete": true,
+      "MissionExhibitInitTime": "2023-11-03T14:17:08.768747+08:00",
+      "MissionExhibitEndTime": "2023-11-03T14:22:02.6762+08:00"
+    },
+    {
+      "MissionExhibitName": "58",
+      "IsMissionExhibitComplete": true,
+      "MissionExhibitInitTime": "2023-11-03T14:17:12.436604+08:00",
+      "MissionExhibitEndTime": "2023-11-03T14:22:15.644246+08:00"
+    },
+    {
+      "MissionExhibitName": "08",
+      "IsMissionExhibitComplete": true,
+      "MissionExhibitInitTime": "2023-11-03T14:24:18.088346+08:00",
+      "MissionExhibitEndTime": "2023-11-03T14:25:42.862635+08:00"
+    }
+  ]
+}
